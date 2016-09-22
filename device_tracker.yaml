@@ -1,0 +1,7 @@
+# Location (Asus router based)
+  platform: asuswrt
+  host: !secret router_ip
+  protocol: ssh
+  mode: router
+  username: !secret router_username
+  password: !secret router_password

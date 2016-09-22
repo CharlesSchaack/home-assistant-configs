@@ -1,0 +1,36 @@
+homeassistant:
+  name: Home
+  latitude: !secret latitude
+  longitude: !secret longitude
+  temperature_unit: F
+  time_zone: !secret timezone
+  customize: !include customize.yaml
+
+# Enables the frontend
+frontend:
+# Track the sun
+sun:
+# Checks for available updates
+updater:
+# View all events in a logbook
+logbook:
+# Enables support for tracking state changes over time.
+history:
+
+# Password
+http:
+  api_password: !secret http_password
+
+automation: !include automation.yaml
+group: !include groups.yaml
+sensor: !include sensors.yaml
+media_player: !include media_players.yaml
+device_tracker: !include device_tracker.yaml
+switch: !include switches.yaml
+
+# Philips Hue
+light:
+  platform: hue
+  host: !secret hue_ip
+  allow_unreachable: true
+  filename: phue.conf

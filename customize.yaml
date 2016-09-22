@@ -1,0 +1,36 @@
+sensor.speedtest_download:
+  friendly_name: 'Download'
+  icon: mdi:speedometer
+
+sensor.speedtest_upload:
+  friendly_name: 'Upload'
+  icon: mdi:speedometer
+
+sensor.systemmonitor_disk_use_percentage:
+  friendly_name: 'Disk Usage'
+  icon: mdi:speedometer
+
+switch.harmony_hub_1:
+  friendly_name: 'Watch TV'
+  icon: mdi:television
+#  assumed_state: false
+
+switch.harmony_hub_2:
+  friendly_name: 'Watch Computer'
+  icon: mdi:monitor
+#  assumed_state: false
+
+switch.harmony_hub_3:
+  friendly_name: 'Listen to Vinyl'
+  icon: mdi:music-circle
+#  assumed_state: false
+
+switch.harmony_hub_4:
+  friendly_name: 'Volume'
+  icon: mdi:volume-medium
+#  assumed_state: false
+
+switch.harmony_hub_5:
+  friendly_name: 'Channel'
+  icon: mdi:remote
+#  assumed_state: false

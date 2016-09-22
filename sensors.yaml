@@ -1,0 +1,48 @@
+# Lastfm    
+  - platform: lastfm
+    api_key: !secret lastfm_api
+    users:
+      - !secret lastfm_user1
+      - !secret lastfm_user2
+
+# Speedtest
+  - platform: speedtest
+    monitored_conditions:
+      - download
+      - upload
+
+# Steam
+  - platform: steam_online
+    api_key: !secret steam_api
+    accounts:
+      - !secret steam_account1
+      - !secret steam_account2
+
+# Twitch
+  - platform: twitch
+    channels:
+      - !secret twitch_user1
+      - !secret twitch_user2
+      - !secret twitch_user3
+
+# System Monitor
+  - platform: systemmonitor
+    resources:
+      - type: disk_use_percent
+        arg: !secret disk_location
+      - type: memory_free
+      - type: processor_use
+      - type: network_in
+        arg: eth0
+
+
+# Weather Underground
+  - platform: wunderground
+    api_key: !secret wu_api
+    monitored_conditions:
+      - weather
+      - temp_f
+      - station_id
+      - feelslike_string
+      - wind_string
+      - precip_today_string

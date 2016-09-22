@@ -1,0 +1,85 @@
+###############################################################################
+#                                                                             #
+#                                                                             #
+#                                VIEWS                                        #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+#default_view:
+#  view: yes
+#  entities:
+#    - group.location
+#    - group.weather
+#    - group.network
+#    - group.twitch
+#    - group.lastfm
+#    - group.steam
+
+#devicestab:
+#  name: Devices
+#  view: yes
+#  entities:
+#    - group.mediaplayer
+
+###############################################################################
+#                                                                             #
+#                                                                             #
+#                                GROUPS                                       #
+#                                                                             #
+#                                                                             #
+###############################################################################
+network:
+  name: Network
+  entities:
+    - sensor.speedtest_download
+    - sensor.speedtest_upload
+#    - sensor.systemmonitor_disk_use_percentage
+
+weather:
+  name: Weather
+  entities:
+    - sensor.PWS_weather
+    - sensor.PWS_temp_f
+    - sensor.PWS_wind_string
+    - sensor.PWS_precip_today_string
+    - sensor.PWS_feelslike_string
+    - sensor.PWS_station_id
+
+location:
+  name: Location
+  entities:
+    - !secret self_tracker
+
+lastfm:
+  name: Lastfm
+  entities:
+    - !secret lastfm_sensor1
+    - !secret lastfm_sensor2
+
+twitch:
+  name: Twitch
+  entities:
+    - !secret twitch_sensor1
+    - !secret twitch_sensor2
+    - !secret twitch_sensor3
+
+steam:
+  name: Steam
+  entities:
+    - !secret steam_sensor1
+    - !secret steam_sensor2
+
+mediaplayer:
+  name: MediaPlayers
+  entities:
+    - mediaplayer.kodi
+
+harmony:
+  name: HarmonyHub
+  entities:
+    - switch.harmony_hub_1
+    - switch.harmony_hub_2
+    - switch.harmony_hub_3
+    - switch.harmony_hub_4
+    - switch.harmony_hub_5

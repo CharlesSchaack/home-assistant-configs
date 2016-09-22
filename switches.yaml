@@ -1,0 +1,17 @@
+- platform: command_line
+  switches:
+    harmony_hub_1:
+      oncmd: !secret switch1_on
+      offcmd: !secret switch1_off
+
+- platform: command_line
+  switches:
+    harmony_hub_2:
+      oncmd: !secret switch2_on
+      offcmd: !secret switch2_off
+
+- platform: command_line
+  switches:
+    harmony_hub_3:
+      oncmd: !secret switch3_on
+      offcmd: !secret switch3_off

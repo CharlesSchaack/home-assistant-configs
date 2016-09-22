@@ -1,0 +1,13 @@
+# Kodi
+- platform: kodi
+  host: !secret kodi_ip
+  port: !secret kodi_port
+  name: Kodi
+  user: kv
+  password: !secret kodi_password
+  turn_off_action: quit
+
+# Example configuration.yaml entry
+- platform: roku
+  host: !secret roku_ip
+
