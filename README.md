@@ -1,3 +1,3 @@
 # home-assistant-configs
-# home-assistant-configs
-# home-assistant-configs
+
+My [Home Assistant](https://home-assistant.io/) Configuration Files
