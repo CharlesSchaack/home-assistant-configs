@@ -6,21 +6,24 @@
 #                                                                             #
 ###############################################################################
 
-#default_view:
-#  view: yes
-#  entities:
-#    - group.location
-#    - group.weather
-#    - group.network
-#    - group.twitch
-#    - group.lastfm
-#    - group.steam
+default_view:
+  view: yes
+  entities:
+    - group.location
+    - group.weather
+    - group.living_room
+    - group.bedroom
+    - group.harmony
+    - group.twitch
+    - group.lastfm
+    - group.steam
 
-#devicestab:
-#  name: Devices
-#  view: yes
-#  entities:
-#    - group.mediaplayer
+devicestab:
+  name: Devices
+  view: yes
+  entities:
+    - group.network
+    - group.mediaplayer
 
 ###############################################################################
 #                                                                             #
@@ -39,12 +42,28 @@ network:
 weather:
   name: Weather
   entities:
-    - sensor.PWS_weather
-    - sensor.PWS_temp_f
-    - sensor.PWS_wind_string
-    - sensor.PWS_precip_today_string
-    - sensor.PWS_feelslike_string
-    - sensor.PWS_station_id
+    - sensor.pws_weather
+    - sensor.forecastio_summary
+    - sensor.forecastio_temperature
+    - sensor.forecastio_humidity
+    - sensor.forecastio_cloud_coverage
+    - sensor.forecastio_precip
+    - sensor.forecastio_precip_probability
+    - sensor.forecastio_daily_high_temperature
+    - sensor.forecastio_daily_low_temperature
+
+devices:
+  name: Devices
+  entities:
+    - device_tracker.mediapc
+    - device_tracker.flat
+    - device_tracker.charlietablet
+    - device_tracker.cc95d713ac60
+    - device_tracker.np63264e036895
+    - device_tracker.harmonyhub
+    - device_tracker.philipshue
+    - device_tracker.7429afcf78d7
+    - device_tracker.7ced8ddce37e
 
 location:
   name: Location
@@ -83,3 +102,14 @@ harmony:
     - switch.harmony_hub_3
     - switch.harmony_hub_4
     - switch.harmony_hub_5
+
+living_room:
+  name: Living_Room
+  entities:
+    - light.hue_color_lamp_1
+    - light.hue_color_lamp_2
+
+bedroom:
+  name: Bedroom
+  entities:
+    - light.hue_color_lamp_3
